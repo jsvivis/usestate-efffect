@@ -2,12 +2,19 @@ import {useEffect, useState} from 'react';
 import './icounter.css';
 
 export function Icounter() {
-  const [value, setValue] = useState(1)
+  const [value, setValue] = useState(5)
     const [buttonStyle, setButtonStyle] = useState('counter-button-minus-active')
+HEAD
   
     useEffect(()=>{
         //console.log(`estilo atual: ${buttonStyle}`)//
     }, [buttonStyle]);
+
+    
+    useEffect(()=>{
+        // console.log(`estilo atual: ${buttonStyle}`)
+    }, [buttonStyle])
+
 
     function down(){
         if(value <=1){
